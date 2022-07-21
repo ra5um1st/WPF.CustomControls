@@ -152,18 +152,11 @@ namespace WPF_Timeline.Timeline
 
         protected override Size MeasureOverride(Size availableSize)
         {
-            //if(TotalWidth > availableSize.Width || double.IsInfinity(availableSize.Width))
-            //{
-            //    availableSize.Width = TotalWidth;
-            //}
-
             foreach (UIElement child in InternalChildren)
             {
                 child.Measure(availableSize);
             }
 
-            //var lastChild = GetChildWithMaxDateTime();
-            //var maxWidth = GetFinishTimeSpan(lastChild) / IntervalTimeSpan * IntervalWidth;
             var maxSize = new Size(TotalWidth, GetChildWithMaxHeight().DesiredSize.Height);
 
             if (double.IsInfinity(availableSize.Width))
