@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF.Timeline", "WPF_Timeline\WPF.Timeline.csproj", "{8F72034D-141B-4585-8205-0DD609FFB187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF.RaindropAnimation", "WPF.RaindropAnimation\WPF.RaindropAnimation.csproj", "{0E40D60B-DFDB-4B03-9739-0D8E0A2F7D8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F72034D-141B-4585-8205-0DD609FFB187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F72034D-141B-4585-8205-0DD609FFB187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F72034D-141B-4585-8205-0DD609FFB187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F72034D-141B-4585-8205-0DD609FFB187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E40D60B-DFDB-4B03-9739-0D8E0A2F7D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E40D60B-DFDB-4B03-9739-0D8E0A2F7D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E40D60B-DFDB-4B03-9739-0D8E0A2F7D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E40D60B-DFDB-4B03-9739-0D8E0A2F7D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEF6532C-B16A-4663-991D-37C71B8EA5F4}
+	EndGlobalSection
+EndGlobal

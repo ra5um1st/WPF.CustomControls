@@ -1,0 +1,71 @@
+﻿<Window x:Class="WPF.RaindropAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF.RaindropAnimation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="canvas">
+            <Line 
+                x:Name="line"
+                Canvas.Top="0"
+                Canvas.Left="200"
+                X1="0" 
+                Y1="0"
+                X2="0"
+                Y2="{Binding ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Canvas}}"
+                Stroke="Black"
+                SnapsToDevicePixels="True"/>
+            <Rectangle 
+                x:Name="rect" 
+                Width="100" 
+                Height="50" 
+                Canvas.Left="300" 
+                Canvas.Top="200" 
+                Fill="Black"
+                MouseLeftButtonDown="rect_MouseLeftButtonDown"
+                MouseLeftButtonUp="rect_MouseLeftButtonUp"
+                MouseMove="rect_MouseMove"/>
+            <Ellipse
+                Visibility="Collapsed"
+                x:Name="raindropEllipse"
+                Width="20"
+                Height="100">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop x:Name="gradientStop1_1" Color="Transparent" Offset="0"/>
+                        <GradientStop x:Name="gradientStop1_2" Color="DeepSkyBlue" Offset="0.05"/>
+                        <GradientStop x:Name="gradientStop1_3" Color="Transparent" Offset="0.10"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+                <Ellipse.Resources>
+                    <Storyboard x:Key="storyboard">
+                        <DoubleAnimation 
+                                    Storyboard.TargetName="gradientStop1_1"
+                                    Storyboard.TargetProperty="Offset"
+                                    Duration="0:0:0.5" 
+                                    From="0"
+                                    To="1"
+                                    DecelerationRatio="1"/>
+                        <DoubleAnimation 
+                                    Storyboard.TargetName="gradientStop1_2"
+                                    Storyboard.TargetProperty="Offset"
+                                    Duration="0:0:0.5" 
+                                    From="0.05"
+                                    To="1"
+                                    DecelerationRatio="1"/>
+                        <DoubleAnimation 
+                                    Storyboard.TargetName="gradientStop1_3"
+                                    Storyboard.TargetProperty="Offset"
+                                    Duration="0:0:0.4" 
+                                    From="0.10"
+                                    To="1"
+                                    DecelerationRatio="1"/>
+                    </Storyboard>
+                </Ellipse.Resources>
+            </Ellipse>
+        </Canvas>
+    </Grid>
+</Window>
